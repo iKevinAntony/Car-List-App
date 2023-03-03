@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarListApp.Maui.LoginPage"
+             xmlns:viewmodel="clr-namespace:CarListApp.Maui.ViewModels"
+             x:DataType="viewmodel:LoginPageViewmodel"
+             Shell.NavBarIsVisible="False"
+             Title="LoginPage">
+    <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+        <Image Source="kevin.png"/>
+        <VerticalStackLayout>
+
+            <Label Text="Welcome!" FontSize="28" TextColor="Gray" HorizontalTextAlignment="Center" />
+            <Label Text="login to your account" FontSize="18" TextColor="Gray" HorizontalTextAlignment="Center" />
+            
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Padding="5"  Margin="9" Spacing="5">
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="8" HasShadow="True" Margin="5">
+                <Entry x:Name="UserName" Placeholder="Enter Username" Text="{Binding Username}" FontSize="Medium" />
+            </Frame>
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="8"  HasShadow="True" Margin="5" >
+                <Entry x:Name="Password" Placeholder="Enter Password" IsPassword="True" Text="{Binding Password}" FontSize="Medium"/>
+            </Frame>
+            <Button Text="Sign In" WidthRequest="150" HeightRequest="50" CornerRadius="20" HorizontalOptions="Center"  Margin="9"
+                Command="{Binding LoginCommand}"/>
+        </VerticalStackLayout>
+
+
+      
+        
+    </VerticalStackLayout>
+</ContentPage>
